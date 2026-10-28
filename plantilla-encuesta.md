@@ -1,8 +1,8 @@
 # Plantilla de diseño — Encuesta de satisfacción (hito 1)
 
-**Equipo:** 7 · **Integrantes:** Jeriel López,  · **Fecha:** 20/10/2026
+**Equipo:** 7 · **Integrantes:** Jeriel López,  · <br>**Fecha:** 28/10/2026 <br>
 **Repositorio (fork):** github.com/alejandro-guanocunga/IDSD422-lab3-diseno-encuesta
-**Enfoque del equipo (aprobado en clase):** ___
+<br>**Enfoque del equipo (aprobado en clase):** ___
 
 Completa cada sección. Usa commits por sección; la historia del repositorio se revisa.
 
@@ -15,7 +15,7 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 
 ## 2. Población objetivo
 
-- Población: Personas de 18 años o más que realizan compras habituales de consumo masivo en las tiendas y supermercados de RetailAndina S.A. en la ciudad de Quito al menos una vez al mes.
+- Población: Personas de 18 años o más que realizan compras habituales de consumo en las tiendas y supermercados de RetailAndina S.A. En la ciudad de Quito al menos una vez al mes.
 
 - Límites y justificación: Se restringe geográficamente a la ciudad de Quito urbano y a clientes mayores de edad con una frecuencia de compra mensual mínima, garantizando una población alcanzable para la recolección ágil de respuestas reales entre la red de contactos directos de los integrantes, asegurando además que conozcan la propuesta de valor de la cadena.
 
@@ -38,11 +38,14 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 
 | # | Pregunta | Tipo de variable | Dtype al cargar | Opciones / escala |
 |---|---|---|---|---|
-| 1 | ¿Con qué frecuencia, en el anterior mes, usted realizo compras en un supermercado? | Categórica ordinal | `int64` | 1). 1 a 2 veces <br> 2). 3 a 4<br>3). 5 a 6 veces<br> 4).  Mas de 6|
-| 2 | ¿Cuál es su gasto aproximado, en USD, de compras de supermercado en el anterior mes? | Numérica continua | `float64` | Menos de $20, $20 a $50, Más de $50 |
-| 3 | ¿Qué tan satisfecho está con los servicios actuales de las tiendas RetailAndina? | Categórica ordinal | `int64` | Escala del 1 (Nada satisfecho) al 5 (Muy satisfecho) |
-| 4 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | `object` / `str` | 1). Descuentos directos<br> 2). Acumulación de puntos <br> 3). Productos 2x1 <br> 4: Cupones de regalo |
-| 5 | ¿Recomendaría el nuevo programa de fidelización a un familiar o amigo? | Categórica ordinal (Likert) | `int64` | Escala del 1 (Nada probable) al 10 (Muy probable) |
+| 1 |¿En que rango de edad ustes de localiza?|---|---|1) 18 - 20 <br> 2) 20-30 <br> 3) 30-40 <br> 4) 40-50 <br> 5) 50-60 <br> 6) Mayor a 60 años |
+| 2 |¿Con que genero se identifica?|---|---|1) Masculino <br> 2) Femenino <br> 3) Otro |
+| 3 | ¿Con qué frecuencia, en el anterior mes, usted realizo compras en un supermercado? | Categórica ordinal | `int64` | 1). 1 a 2 veces <br> 2). 3 a 4<br>3). 5 a 6 veces<br> 4).  Mas de 6|
+| 4 | ¿Cuál es su gasto aproximado, en USD, de compras de supermercado en el anterior mes? | Numérica continua | `float64` |Espacio de texto para que coloque el valor|
+| 5 | ¿Qué tan satisfecho está con los servicios actuales de las tiendas RetailAndina? |  |  | Escala del 1 (Nada satisfecho) al 5 (Muy satisfecho) |
+| 6 | ¿Cual de estos tipos de productos, usted suele comprar más? |  |  |1) Lacteos  <br> 2). Frutas y Vegetales <br> 3) Cárnicos <br> 4) Limpieza y Aseo <br> 5) Otros (Espacio de texto)|
+| 7 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | `object` / `str` | 1). Descuentos directos<br> 2). Acumulación de puntos <br> 3). Productos 2x1 <br> 4). Cupones de regalo |
+
 
 
 
@@ -52,11 +55,12 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 
 | Sesgo potencial | Mitigación |
 |---|---|
-| 1. Sesgo de selección por conveniencia: Al recolectar datos en la red cercana (amigos y familiares), se subrepresenta a clientes mayores o de otros segmentos que compran habitualmente en RetailAndina. | Declarar el canal en la metodología, diversificar el envío del formulario a distintos rangos de edad y complementar el dataset con filas simuladas balanceadas para calibrar la representatividad. |
+|Sesgo de selección por conveniencia: Al recolectar datos en la red cercana (amigos y familiares), se subrepresenta a clientes mayores o de otros segmentos que compran habitualmente en RetailAndina. | Declarar el canal en la metodología, diversificar el envío del formulario a distintos rangos de edad y complementar el dataset con filas simuladas balanceadas para calibrar la representatividad. |
 
 ## 6. Confidencialidad (RA3)
 
 - **Datos personales que se piden y por qué:**
+En este caso se estan solicitando el genero y la edad. Estos son necesarios para poder comprobar si hay alguna relación entre el tipos de productos que mas suelen comprar o el beneficio valorado, y estos datos 
 
 - **Plan de anonimización (qué se quita o codifica antes de compartir):**
 
