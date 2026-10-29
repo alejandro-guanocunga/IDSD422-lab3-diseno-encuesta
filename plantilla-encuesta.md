@@ -45,7 +45,7 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 | 5 | ¿Qué tan satisfecho está con los servicios actuales de las tiendas RetailAndina? | Categórica ordinal (escala Likert) | `int64` | Escala del 1 (Nada satisfecho) al 5 (Muy satisfecho) |
 | 6 | ¿Cuál de estos tipos de productos suele comprar más? | Categórica nominal | `object` / `str` | 1) Lácteos <br> 2) Frutas y vegetales <br> 3) Cárnicos <br> 4) Limpieza y aseo 
 | 7 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | `object` / `str` | 1) Descuentos directos <br> 2) Acumulación de puntos <br> 3) Productos 2x1 <br> 4) Cupones de regalo |
-
+| 8 | ¿Qué tan importante considera que es la cercanía del supermercado a su domicilio al momento de elegir dónde comprar? | Categórica ordinal (escala Likert) | `int64` | Escala del 1 (Nada importante) al 5 (Muy importante) |
 
 
 
@@ -54,6 +54,7 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 | Sesgo potencial | Mitigación |
 |---|---|
 |Sesgo de selección por conveniencia: Al recolectar datos en la red cercana (amigos y familiares), se subrepresenta a clientes mayores o de otros segmentos que compran habitualmente en RetailAndina. | Declarar el canal en la metodología, diversificar el envío del formulario a distintos rangos de edad y complementar el dataset con filas simuladas balanceadas para calibrar la representatividad. |
+| Sesgo de respuesta: Los encuestados podrían responder lo que consideran socialmente aceptable en lugar de expresar sus preferencias reales. | Garantizar el anonimato de las respuestas y utilizar preguntas neutrales que no sugieran una respuesta deseada. |
 
 ## 6. Confidencialidad (RA3)
 
