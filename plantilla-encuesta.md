@@ -38,20 +38,18 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 
 | # | Pregunta | Tipo de variable | Dtype al cargar | Opciones / escala |
 |---|---|---|---|---|
-| 1 |¿En que rango de edad ustes de localiza?|---|---|1) 18 - 20 <br> 2) 20-30 <br> 3) 30-40 <br> 4) 40-50 <br> 5) 50-60 <br> 6) Mayor a 60 años |
-| 2 |¿Con que genero se identifica?|---|---|1) Masculino <br> 2) Femenino <br> 3) Otro |
-| 3 | ¿Con qué frecuencia, en el anterior mes, usted realizo compras en un supermercado? | Categórica ordinal | `int64` | 1). 1 a 2 veces <br> 2). 3 a 4<br>3). 5 a 6 veces<br> 4).  Mas de 6|
-| 4 | ¿Cuál es su gasto aproximado, en USD, de compras de supermercado en el anterior mes? | Numérica continua | `float64` |Espacio de texto para que coloque el valor|
-| 5 | ¿Qué tan satisfecho está con los servicios actuales de las tiendas RetailAndina? |  |  | Escala del 1 (Nada satisfecho) al 5 (Muy satisfecho) |
-| 6 | ¿Cual de estos tipos de productos, usted suele comprar más? |  |  |1) Lacteos  <br> 2). Frutas y Vegetales <br> 3) Cárnicos <br> 4) Limpieza y Aseo <br> 5) Otros (Espacio de texto)|
-| 7 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | `object` / `str` | 1). Descuentos directos<br> 2). Acumulación de puntos <br> 3). Productos 2x1 <br> 4). Cupones de regalo |
+| 1 | ¿En qué rango de edad se encuentra? | Categórica ordinal | `int64` | 1) 18–20 <br> 2) 21–30 <br> 3) 31–40 <br> 4) 41–50 <br> 5) 51–60 <br> 6) Mayor a 60 años |
+| 2 | ¿Con qué género se identifica? | Categórica nominal | `object` / `str` | 1) Masculino <br> 2) Femenino <br> 3) Otro |
+| 3 | ¿Con qué frecuencia, en el anterior mes, usted realizó compras en un supermercado? | Categórica ordinal | `int64` | 1) 1 a 2 veces <br> 2) 3 a 4 veces <br> 3) 5 a 6 veces <br> 4) Más de 6 |
+| 4 | ¿Cuál es su gasto aproximado, en USD, de compras de supermercado en el anterior mes? | Numérica continua | `float64` | Espacio de texto para que coloque el valor |
+| 5 | ¿Qué tan satisfecho está con los servicios actuales de las tiendas RetailAndina? | Categórica ordinal (escala Likert) | `int64` | Escala del 1 (Nada satisfecho) al 5 (Muy satisfecho) |
+| 6 | ¿Cuál de estos tipos de productos suele comprar más? | Categórica nominal | `object` / `str` | 1) Lácteos <br> 2) Frutas y vegetales <br> 3) Cárnicos <br> 4) Limpieza y aseo 
+| 7 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | `object` / `str` | 1) Descuentos directos <br> 2) Acumulación de puntos <br> 3) Productos 2x1 <br> 4) Cupones de regalo |
 
 
 
 
 ## 5. Análisis de sesgos
-
-*Identifica 2 problemas potenciales de esta encuesta y su mitigación.*
 
 | Sesgo potencial | Mitigación |
 |---|---|
@@ -59,16 +57,15 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 
 ## 6. Confidencialidad (RA3)
 
+## 6. Confidencialidad (RA3)
+
 - **Datos personales que se piden y por qué:**
-En este caso se estan solicitando el genero y la edad. Estos son necesarios para poder comprobar si hay alguna relación entre el tipos de productos que mas suelen comprar o el beneficio valorado, y estos datos 
+Se solicitan únicamente dos datos personales: el rango de edad y el género. Ambos son necesarios para realizar cruces de variables que den sentido al análisis: comparar la proporción de hombres y mujeres según el tipo de producto que compran con mayor frecuencia, y determinar si algún grupo etario prefiere un tipo de beneficio en particular (descuentos directos, puntos, 2x1 o cupones). Esta información permite segmentar los resultados y orientar el diseño del programa de fidelización de RetailAndina. No se solicitan nombre, correo, teléfono, cédula ni dirección, y la edad se recoge por rangos y no como valor exacto, para reducir la posibilidad de identificar a una persona.
 
 - **Plan de anonimización (qué se quita o codifica antes de compartir):**
-
-## 7. Verificación con herramientas (Python/R)
-
-*Escribe `scripts/verificacion_encuesta.py` (o `.R`): debe cargar `plantillas/encuesta_respuestas.csv` y reportar los tipos de cada columna, los datos faltantes por columna y la distribución de `satisfaccion_general` y `recomendaria`. Incluye la salida y responde:*
-
-- ¿Coinciden los tipos con tu predicción de la sección 4?
-- ¿Cuántos datos faltantes hay por columna?
-
-*Ejecuta el script sobre el CSV final (separa con un filtro de la columna `origen` las filas reales de las simuladas): ¿qué resultado delataría un sesgo de **no respuesta** y cuál un sesgo de **respuesta**? Escribe tu interpretación usando solo las respuestas reales.*
+  - El formulario no recoge datos de identificación directa (nombre, correo, teléfono, cédula). Si el envío por WhatsApp o correo deja algún rastro, no se incluye en el dataset.
+  - A cada respuesta se le asigna un ID numérico secuencial (R001, R002, …) que no guarda relación con la identidad del encuestado.
+  - Las variables categóricas (edad, género, frecuencia, producto y beneficio) se codifican con números, según la tabla del cuestionario.
+  - Las respuestas abiertas, como la de gasto, se revisan antes de compartir, para eliminar cualquier dato que permita identificar a alguien.
+  - La lista de contactos a quienes se envió el formulario se mantiene fuera del repositorio y no se comparte con el dataset.
+  - Solo se comparte el dataset anonimizado (20 respuestas reales y 60 simuladas) y se reportan resultados agregados, no respuestas individuales.
