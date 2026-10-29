@@ -1,6 +1,6 @@
 # Plantilla de diseño — Encuesta de satisfacción (hito 1)
 
-**Equipo:** 7 · **Integrantes:** Jeriel López,  · <br>**Fecha:** 28/10/2026 <br>
+**Equipo:** 7 · **Integrantes:** Jeriel López, Alejandro-Guanocunga  · <br>**Fecha:** 28/10/2026 <br>
 **Repositorio (fork):** github.com/alejandro-guanocunga/IDSD422-lab3-diseno-encuesta
 <br>**Enfoque del equipo (aprobado en clase):** ___
 
@@ -54,8 +54,6 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 | Sesgo potencial | Mitigación |
 |---|---|
 |Sesgo de selección por conveniencia: Al recolectar datos en la red cercana (amigos y familiares), se subrepresenta a clientes mayores o de otros segmentos que compran habitualmente en RetailAndina. | Declarar el canal en la metodología, diversificar el envío del formulario a distintos rangos de edad y complementar el dataset con filas simuladas balanceadas para calibrar la representatividad. |
-
-## 6. Confidencialidad (RA3)
 
 ## 6. Confidencialidad (RA3)
 
