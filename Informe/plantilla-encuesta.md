@@ -8,10 +8,13 @@ Completa cada sección. Usa commits por sección; la historia del repositorio se
 
 > **Formato del entregable:** exporta esta plantilla completada a PDF, con el enlace de tu fork en la carátula, y guarda el PDF en `informes/` del fork. Entrega el PDF y el enlace del fork en el aula virtual.
 
-## 1. Objetivo de la encuesta
+## 1. Objetivos de la encuesta
 
-Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de beneficios y recompensas de su nuevo programa de fidelización, con la meta de incrementar la tasa de retención de clientes frecuentes en al menos un 12% durante el primer trimestre de lanzamiento.
+### Objetivo Principal:
+Identificar qué beneficios y qué aspectos del servicio valoran más los clientes habituales de RetailAndina en Quito, para orientar el diseño de su programa de fidelización.
 
+### Objetivo Secundario:
+Aumentar la retención de clientes frecuentes en al menos 12% durante el primer trimestre de lanzamiento. Esa meta se evaluará después con los registros de compras de la empresa, no con esta encuesta.
 
 ## 2. Población objetivo
 
