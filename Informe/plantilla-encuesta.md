@@ -37,15 +37,15 @@ Apoyar la decisión de gerencia de RetailAndina S.A. para diseñar el esquema de
 
 
 | # | Pregunta | Tipo de variable | Dtype al cargar | Opciones / escala |
-|---|---|---|---|---|
-| 1 | ¿En qué rango de edad se encuentra? | Categórica ordinal | `int64` | 1) 18–20 <br> 2) 21–30 <br> 3) 31–40 <br> 4) 41–50 <br> 5) 51–60 <br> 6) Mayor a 60 años |
-| 2 | ¿Con qué género se identifica? | Categórica nominal | `object` / `str` | 1) Masculino <br> 2) Femenino <br> 3) Otro |
-| 3 | ¿Con qué frecuencia, en el anterior mes, usted realizó compras en un supermercado? | Categórica ordinal | `int64` | 1) 1 a 2 veces <br> 2) 3 a 4 veces <br> 3) 5 a 6 veces <br> 4) Más de 6 |
-| 4 | ¿Cuál es su gasto aproximado, en USD, de compras de supermercado en el anterior mes? | Numérica continua | `float64` | Espacio de texto para que coloque el valor |
-| 5 | ¿Qué tan satisfecho está con los servicios actuales de las tiendas RetailAndina? | Categórica ordinal (escala Likert) | `int64` | Escala del 1 (Nada satisfecho) al 5 (Muy satisfecho) |
-| 6 | ¿Cuál de estos tipos de productos suele comprar más? | Categórica nominal | `object` / `str` | 1) Lácteos <br> 2) Frutas y vegetales <br> 3) Cárnicos <br> 4) Limpieza y aseo 
-| 7 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | `object` / `str` | 1) Descuentos directos <br> 2) Acumulación de puntos <br> 3) Productos 2x1 <br> 4) Cupones de regalo |
-| 8 | ¿Qué tan importante considera que es la cercanía del supermercado a su domicilio al momento de elegir dónde comprar? | Categórica ordinal (escala Likert) | `int64` | Escala del 1 (Nada importante) al 5 (Muy importante) |
+|---|----------|------------------|-----------------|-------------------|
+| 1 | ¿En qué rango de edad se encuentra? | Categórica ordinal | int64 | 1) 18–20<br>2) 21–30<br>3) 31–40<br>4) 41–50<br>5) 51–60<br>6) Mayor a 60 años |
+| 2 | ¿Qué tan probable es que se inscriba en un programa de fidelización de RetailAndina? | Categórica ordinal (escala Likert) | int64 | 1) Nada probable<br>2) Poco probable<br>3) Neutral<br>4) Probable<br>5) Muy probable |
+| 3 | Durante el mes anterior, ¿cuántas veces realizó compras en un supermercado? | Categórica ordinal | int64 | 0) Ninguna<br>1) 1 a 2 veces<br>2) 3 a 4 veces<br>3) 5 a 6 veces<br>4) Más de 6 |
+| 4 | ¿En qué rango se ubica su gasto mensual aproximado en compras de supermercado? | Categórica ordinal | int64 | 1) Menos de 100 USD<br>2) 100 a 250 USD<br>3) 251 a 500 USD<br>4) Más de 500 USD<br>5) Prefiero no responder |
+| 5 | ¿Qué tan satisfecho o satisfecha está con los siguientes aspectos de RetailAndina? (atención del personal, precios, variedad de productos, limpieza y comodidad) | Categórica ordinal (escala Likert) | int64 (una columna por aspecto) | 1) Muy insatisfecho<br>2) Insatisfecho<br>3) Ni satisfecho ni insatisfecho<br>4) Satisfecho<br>5) Muy satisfecho |
+| 6 | ¿Qué tipos de productos compra con más frecuencia? Puede marcar más de uno. | Categórica nominal (selección múltiple) | int64 0/1 (una columna por opción) | Abarrotes<br>Lácteos<br>Cárnicos<br>Frutas y vegetales<br>Bebidas<br>Limpieza y aseo<br>Cuidado personal<br>Otro |
+| 7 | ¿Qué tipo de beneficio valoraría más en un supermercado? | Categórica nominal | object / str | 1) Descuentos directos<br>2) Acumulación de puntos<br>3) Productos 2x1<br>4) Cupones de regalo<br>5) Otro (especifique)<br>6) Ninguno |
+| 8 | ¿Qué tan importante es cada uno de estos beneficios para usted? (descuentos directos, acumulación de puntos, productos 2x1, cupones de regalo, entregas a domicilio, ofertas personalizadas) | Categórica ordinal (escala Likert) | int64 (una columna por beneficio) | 1) Nada importante<br>2) Poco importante<br>3) Neutral<br>4) Importante<br>5) Muy importante |
 
 
 
