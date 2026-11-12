@@ -28,7 +28,7 @@ Aumentar la retención de clientes frecuentes en al menos 12% durante el primer 
 
 - **Método:** Muestreo por conveniencia declarada con referidos (contactos directos que cumplen el perfil de cliente en RetailAndina S.A.).
 
-- **Tamaño y justificación:** Se empleara un tamaño de muestra de 80 encuestados, siendo 20 individuos  (10 por integrante) más 60 respuestas simuladas con código, totalizando 80 filas en el dataset final (dentro del rango exigido de 60–100 filas) para asegurar factibilidad en el levantamiento y suficiente potencia estadística en las auditorías.
+- **Tamaño y justificación:** Se empleará una muestra total de 80 filas: 20 respuestas reales (10 por integrante) y 60 respuestas simuladas con código, dentro del rango exigido de 60 a 100 filas. Las respuestas simuladas se usan solo para tener volumen en los ejercicios; se identifican en la columna origen (real / simulado) y los datos reales se analizan por separad
 
 - **Cómo se seleccionarán los participantes:** Se seleccionará a familiares, amigos y compañeros de universidad que compran habitualmente en las sucursales de RetailAndina en Quito, enviándoles el formulario digital por WhatsApp y correo.
 
@@ -56,7 +56,7 @@ Aumentar la retención de clientes frecuentes en al menos 12% durante el primer 
 
 | Sesgo potencial | Mitigación |
 |---|---|
-|Sesgo de selección por conveniencia: Al recolectar datos en la red cercana (amigos y familiares), se subrepresenta a clientes mayores o de otros segmentos que compran habitualmente en RetailAndina. | Declarar el canal en la metodología, diversificar el envío del formulario a distintos rangos de edad y complementar el dataset con filas simuladas balanceadas para calibrar la representatividad. |
+|Sesgo de selección por conveniencia: Al recolectar datos en la red cercana (amigos y familiares), se subrepresenta a clientes mayores o de otros segmentos que compran habitualmente en RetailAndina. | Declarar el canal en la metodología y diversificar el envío del formulario a distintos rangos de edad. Las filas simuladas no corrigen este sesgo: se declaran en la columna origen y los resultados reales se analizan por separado.|
 | Sesgo de respuesta: Los encuestados podrían responder lo que consideran socialmente aceptable en lugar de expresar sus preferencias reales. | Garantizar el anonimato de las respuestas y utilizar preguntas neutrales que no sugieran una respuesta deseada. |
 
 ## 6. Confidencialidad (RA3)
